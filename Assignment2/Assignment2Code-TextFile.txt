@@ -1,0 +1,71 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Xena Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        background-color: peachpuff;
+        margin: 1cm;
+        border: 2px solid purple;
+        padding: 1cm;
+        border-radius: 20px;
+      }
+
+      input {
+        text-transform: capitalize;
+      }
+
+      table {
+        width: 60%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src="https://tse3.mm.bing.net/th?id=OIP.QVAo9E5XnI7-uY1IS-3aQQHaHn&pid=Api&P=0&w=300&h=300" alt=""
+        style="float: left; width:40px;" />
+      <h1 style="text-align: left;">Hot Balloon Riding Event</h1>
+    </header>
+    <div>
+      <form action="/action_page.php" method="POST" autocomplete="off">
+        <fieldset style="width:20rem;">
+        <legend>Register Now!!</legend>
+        <br>
+        <table>
+          <tr>
+            <td>Name:</td>
+            <td><input type="text" name="name" id="name" pattern="[A-Za-z]{2,}" title="Name should be Characters only and please enter more than two characters." required/></td>
+          </tr>
+          <tr>
+            <td>Age:</td>
+            <td><input type="number" name="age" id="age" min="18" required /></td>
+          </tr>
+          <tr>
+            <td>Email ID:</td>
+            <td><input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="eg: characters@characters.domain " required /></td>
+          </tr>
+          <tr>
+            <td>City:</td>
+            <td>
+              <input type="text" list="city" required />
+              <datalist id="city">
+                <option value="Rajkot"></option>
+                <option value="Vizag"></option>
+                <option value="Bangalore"></option>
+              </datalist>
+            </td>
+          </tr>
+          <tr style="height: 12pt"></tr>
+          <tr>
+            <td></td>
+            <td><input type="submit" name="submit" value="Register" /></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Trading App</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 10%;
+        }
+    
+        td {
+            border: 1px solid black;
+            outline: 1px solid black;
+            outline-offset: -3px;
+            border-collapse: collapse;
+            text-transform: uppercase;
+        }
+    
+        th {
+            font-weight: bold;
+            outline: 1px solid black;
+            outline-offset: -3px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-transform: uppercase;
+        }
+    </style>
+    <script>
+        function validateStock() {
+            var quantity = document.forms['stock']['qty'].value;
+            quantity = parseInt(quantity);
+            if (quantity < 10 || quantity > 100 || quantity % 10 !== 0)
+                alert("INVALID QUANTITY");
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <table id="table">
+            <tr>
+                <th>ticker</th>
+                <th>price</th>
+            </tr>
+            <tr>
+                <td>wipro</td>
+                <td>298.45</td>
+            </tr>
+            <tr>
+                <td>infy</td>
+                <td>949.95</td>
+            </tr>
+            <tr>
+                <td>tcs</td>
+                <td>2713.70</td>
+            </tr>
+            <tr>
+                <td>techm</td>
+                <td>485.85</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <form name="stock">
+            <h1>Stock Trading</h1>
+            <table >
+                <tr>
+                    <td style="text-transform: capitalize">ticker:</td>
+                    <td style=" text-transform: uppercase;"><input type="text" name="ticker" ></input></td>
+                </tr>
+                <tr>
+                    <td style=" text-transform: capitalize ">qantity:</td>
+                    <td><input type="number" name="qty" min="10" max="100" step="10"></input></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="submit" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
